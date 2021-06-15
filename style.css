@@ -1696,6 +1696,17 @@ a {
   color: inherit;
 }
 
+.home-page {
+  margin-bottom: 90px;
+}
+
+.wp-block-image {
+  margin-bottom: 30px;
+}
+.wp-block-image img {
+  width: 100%;
+}
+
 .va-post-img {
   margin-bottom: 30px;
 }
@@ -1734,6 +1745,22 @@ a {
 }
 .va-post-title a:hover {
   color: #f30808;
+}
+
+.widget {
+  margin-bottom: 20px;
+}
+
+.widget-title {
+  margin-bottom: 5px;
+}
+
+.textwidget p {
+  font-size: 12px;
+}
+
+.wp-calendar-table {
+  width: 100%;
 }
 
 .va-main-footer {

@@ -84,6 +84,22 @@ a {
 }
 
 //=======================================
+// HOME
+// ======================================
+
+.home-page {
+	margin-bottom: 90px;
+}
+
+.wp-block-image {
+	margin-bottom: 30px;
+
+	img {
+		width: 100%;
+	}
+}
+
+//=======================================
 // POST
 // ======================================
 
@@ -134,6 +150,26 @@ a {
 			color: #f30808;
 		}
 	}
+}
+
+//=== W I D G E T ===//
+.widget {
+	margin-bottom: 20px;
+}
+
+.widget-title {
+	margin-bottom: 5px;
+}
+
+.textwidget {
+
+	p{
+		font-size: 12px;
+	}
+}
+
+.wp-calendar-table {
+	width: 100%;
 }
 
 //=======================================

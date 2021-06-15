@@ -1,6 +1,6 @@
 <?php
 /**
- * Main Theme Class
+ * Main theme class
  *
  * @package Minimo
  */
@@ -12,7 +12,7 @@ use MINIMO_THEME_VADYM\Inc\Traits\Singleton;
 /**
  * Minimo theme
  */
-class MINIMO_THEME_VADYM {
+class Minimo_Theme {
 	use Singleton;
 
 	/**
@@ -21,6 +21,7 @@ class MINIMO_THEME_VADYM {
 	protected function __construct() {
 		Assets::get_instance();
 		Menu::get_instance();
+		Sidebar::get_instance();
 
 		$this->setup_hooks();
 	}

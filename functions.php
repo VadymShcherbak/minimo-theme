@@ -5,7 +5,7 @@
  * @package Minimo
  */
 
-use MINIMO_THEME_VADYM\Inc\MINIMO_THEME_VADYM;
+use MINIMO_THEME_VADYM\Inc\Minimo_Theme;
 
 if ( ! defined( 'VA_MINIMO_VERSION' ) ) {
 	$this_theme = wp_get_theme();
@@ -21,9 +21,10 @@ if ( ! defined( 'VA_MINIMO_DIR_URI' ) ) {
 }
 
 require_once VA_MINIMO_DIR_PATH . '/inc/traits/trait-singleton.php';
-require_once VA_MINIMO_DIR_PATH . '/inc/classes/class-minimo-theme.php';
+require_once VA_MINIMO_DIR_PATH . '/inc/classes/class-minimo_theme.php';
 require_once VA_MINIMO_DIR_PATH . '/inc/classes/class-assets.php';
 require_once VA_MINIMO_DIR_PATH . '/inc/classes/class-menus.php';
 require_once VA_MINIMO_DIR_PATH . '/inc/helpers/helper.php';
+require_once VA_MINIMO_DIR_PATH . '/inc/classes/class-sidebar.php';
 
-MINIMO_THEME_VADYM::get_instance();
+Minimo_Theme::get_instance();
