@@ -1645,7 +1645,7 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 30px;
+  font-size: 29px;
   line-height: 1.2;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -1696,7 +1696,7 @@ a {
   color: inherit;
 }
 
-.home-page {
+.va-home-page {
   margin-bottom: 90px;
 }
 
@@ -1720,6 +1720,7 @@ a {
 
 .va-category {
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 .va-category a {
   font-family: "Ubuntu", sans-serif;

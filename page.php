@@ -8,7 +8,7 @@
 get_header();
 ?>
 
-<section class="home-page">
+<section class="va-home-page">
 	<div class="container">
 		<?php the_content(); ?>
 	</div>
