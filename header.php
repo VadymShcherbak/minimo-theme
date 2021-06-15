@@ -19,20 +19,20 @@
 <body <?php body_class(); ?>>
 
 <?php
-if ( function_exists( 'wp_body_open' ) ) {
-	wp_body_open();
-}
-?>
+if ( function_exists( 'wp_body_open' ) ) :
+	?>
+	<?php wp_body_open(); ?>
+	<?php endif; ?>
 <header class="va-main-header">
 	<div class="container">
 		<div class="va-header-wrapper">
 			<div class="va-header-logo">
-				<img src="<?php echo VA_MINIMO_DIR_URI . '/assets/img/minimo-logo.jpg'; ?>" alt="logo">
+				<img src="<?php echo esc_url( VA_MINIMO_DIR_URI . '/assets/img/minimo-logo.jpg' ); ?>" alt="logo">
 			</div>
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location' => 'minimo-header-menu',
+					'theme_location' => 'va-minimo-header-menu',
 					'menu'           => 'Header Menu',
 					'container'      => false,
 					'menu_class'     => 'va-main-menu',
@@ -42,3 +42,4 @@ if ( function_exists( 'wp_body_open' ) ) {
 		</div>
 	</div>
 </header>
+

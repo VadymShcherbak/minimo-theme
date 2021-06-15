@@ -5,14 +5,14 @@
  * @package Minimo
  */
 
-namespace MINIMO_THEME\inc;
+namespace MINIMO_THEME_VADYM\inc;
 
-use MINIMO_THEME\Inc\Traits\Singleton;
+use MINIMO_THEME_VADYM\Inc\Traits\Singleton;
 
 /**
  * Merak theme.
  */
-class Menus {
+class Menu {
 	use Singleton;
 
 	/**
@@ -38,8 +38,8 @@ class Menus {
 	public function register_menus() {
 		register_nav_menus(
 			array(
-				'minimo-header-menu' => esc_html__( 'Header Menu', 'minimo' ),
-				'minimo-footer-menu' => esc_html__( 'Footer Menu', 'minimo' ),
+				'va-minimo-header-menu' => esc_html__( 'Header Menu', 'minimo' ),
+				'va-minimo-footer-menu' => esc_html__( 'Footer Menu', 'minimo' ),
 			)
 		);
 	}

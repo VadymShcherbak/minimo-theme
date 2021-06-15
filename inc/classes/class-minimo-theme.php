@@ -5,23 +5,22 @@
  * @package Minimo
  */
 
-namespace MINIMO_THEME\Inc;
+namespace MINIMO_THEME_VADYM\Inc;
 
-use MINIMO_THEME\Inc\Traits\Singleton;
+use MINIMO_THEME_VADYM\Inc\Traits\Singleton;
 
 /**
  * Minimo theme
  */
-class MINIMO_THEME {
+class MINIMO_THEME_VADYM {
 	use Singleton;
 
 	/**
 	 * Construct.
 	 */
 	protected function __construct() {
-		// load class.
 		Assets::get_instance();
-		Menus::get_instance();
+		Menu::get_instance();
 
 		$this->setup_hooks();
 	}
@@ -30,9 +29,7 @@ class MINIMO_THEME {
 	 * Setup hooks.
 	 */
 	protected function setup_hooks() {
-		// actions and filters.
-
-		add_action( 'after_setup_theme', array( $this, 'setup_theme' ) );
+		add_action( 'after_setup_theme', array( $this, 'setup_theme' ), 10 );
 	}
 
 	/**

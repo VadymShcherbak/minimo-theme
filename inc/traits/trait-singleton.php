@@ -5,7 +5,7 @@
  * @package Minimo
  */
 
-namespace MINIMO_THEME\Inc\Traits;
+namespace MINIMO_THEME_VADYM\Inc\Traits;
 
 trait Singleton {
 	/**
@@ -31,7 +31,7 @@ trait Singleton {
 		if ( ! isset( $instance[ $called_class ] ) ) {
 			$instance[ $called_class ] = new $called_class();
 
-			do_action( sprintf( 'minimo_theme_singleton_init%s', $called_class ) );
+			do_action( sprintf( 'MINIMO_THEME_VADYM_singleton_init%s', $called_class ) );
 		}
 
 		return $instance[ $called_class ];

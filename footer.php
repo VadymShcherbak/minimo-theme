@@ -13,7 +13,7 @@
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location' => 'minimo-footer-menu',
+					'theme_location' => 'va-minimo-footer-menu',
 					'menu'           => 'Footer Menu',
 					'container'      => false,
 					'menu_class'     => 'va-footer-menu',

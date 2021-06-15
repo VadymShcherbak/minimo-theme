@@ -16,12 +16,14 @@ get_header();
 		<div class="row spacing-col-1">
 			<?php
 			while ( have_posts() ) :
-					the_post();
 				?>
+					<?php the_post(); ?>
 			<div class="col-lg-6 col-md-6 col-sm-12">
 				<div class="va_post">
 					<div class="va-post-img">
-					<?php echo get_the_post_thumbnail(); ?>
+						<a href="<?php echo esc_url( get_permalink() ); ?>">
+							<?php echo get_the_post_thumbnail(); ?>
+						</a>
 					</div>
 					<div class="va-category">
 						<?php foreach ( get_the_category() as $category ) : ?>
@@ -31,7 +33,11 @@ get_header();
 						<?php endforeach; ?>
 					</div>
 					<div class="va-post-title">
-						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+						<h4>
+							<a href="<?php the_permalink(); ?>">
+								<?php the_title(); ?>
+							</a>
+						</h4>
 					</div>
 					<div class="va-post-content">
 						<?php the_excerpt(); ?>

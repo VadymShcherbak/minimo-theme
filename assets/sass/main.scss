@@ -1,5 +1,7 @@
+@import './css-comment';
 @import './bootstrap-grid.scss';
 @import './reset.scss';
+
 
 body {
   font-family: 'Playfair Display', serif;
@@ -90,6 +92,13 @@ a {
 
 	img {
 		width: 100%;
+		transition: all .4s ease;
+	}
+
+	&:hover {
+		img {
+			opacity: .6;
+		}
 	}
 }
 
@@ -102,6 +111,11 @@ a {
 		font-weight: 300;
 		text-transform: uppercase;
 		color: #b4ad9e;
+		transition: all .4s ease;
+
+		&:hover {
+			color: #d71625;
+		}
 	}
 }
 
@@ -114,6 +128,11 @@ a {
 
 	a {
 		color: #626262;
+		transition: all .4s ease;
+
+		&:hover {
+			color: #f30808;
+		}
 	}
 }
 
