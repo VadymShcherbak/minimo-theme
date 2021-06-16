@@ -25,9 +25,7 @@
 					<p>Follow</p>
 				</div>
 				<div class="va-social-widgets">
-					<i class="fab fa-facebook-f"></i>
-					<i class="fab fa-twitter"></i>
-					<i class="fab fa-instagram"></i>
+					<?php dynamic_sidebar( 'va-footer-sidebar' ); ?>
 				</div>
 			</div>
 		</div>

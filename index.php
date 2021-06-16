@@ -54,6 +54,16 @@ get_header();
 				<?php dynamic_sidebar( 'va-blog-sidebar' ); ?>
 			</div>
 		</div>
+		<div class="va-blog-pagination">
+			<?php
+			the_posts_pagination(
+				array(
+					'prev_text' => '<i class="fal fa-angle-left"></i>',
+					'next_text' => '<i class="fal fa-angle-right"></i>',
+				)
+			);
+			?>
+		</div>
 	</div>
 </section>
 

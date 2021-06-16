@@ -38,6 +38,12 @@ a {
 	text-decoration: none;
 }
 
+textarea {
+	width: 100%;
+	padding: 10px;
+	outline: 0;
+}
+
 //=======HELPER CLASSES=======//
 .spacing-col-1 {
 	> [class*='col-'] {
@@ -76,9 +82,14 @@ a {
 			a {
 				display: block;
 				padding: 5px;
-				font-size: 14px;
+				font-size: 17px;
 				text-transform: uppercase;
 				color: inherit;
+				transition: all .4s ease;
+
+				&:hover {
+					color: #fd0000;
+				}
 			}
 		}
 }
@@ -167,10 +178,68 @@ a {
 	p{
 		font-size: 12px;
 	}
+
+	a {
+		color: #626262;
+		transition: all .4s ease;
+
+		&:hover {
+			color: #fd0000;
+		}
+	}
 }
 
 .wp-calendar-table {
 	width: 100%;
+}
+
+//=== POST PAGINATION ===//
+.va-blog-pagination {
+	display: flex;
+	justify-content: center;
+}
+
+.screen-reader-text {
+	display: none;
+}
+
+.nav-links {
+	display: flex;
+
+	span, a {
+		font-size: 30px;
+		padding: 5px;
+		color: #626262;
+		transition: all .4s ease;
+	}
+
+	i {
+		font-size: 23px;
+	}
+
+	a {
+		display: block;
+		&:hover {
+			color: #f30808;
+		}
+	}
+}
+
+//=== POST COMMENTS ===//
+.comment-meta {
+	word-spacing: 3px;
+}
+
+.comment-edit-link,
+.comment-reply-link, {
+	color: #2cc452;
+}
+
+.comment-reply-title {
+
+	a {
+		color: #2cc452;
+	}
 }
 
 //=======================================
@@ -215,6 +284,7 @@ a {
 }
 
 .va-social-widgets {
+	display: flex;
 
 	i {
 		padding: 5px;
@@ -223,4 +293,7 @@ a {
 			margin-right: 5px;
 		}
 	}
+}
+.widget-footer {
+	margin-bottom: 0;
 }

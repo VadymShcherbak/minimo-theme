@@ -44,6 +44,9 @@ get_header();
 				</div>
 			</div>
 		<?php endif; ?>
+		<div class="va-post-comments">
+			<?php comments_template(); ?>
+		</div>
 	</div>
 </section>
 

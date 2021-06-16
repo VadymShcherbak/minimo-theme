@@ -26,7 +26,7 @@ class Sidebar {
 	 * Setup hooks
 	 */
 	protected function setup_hooks() {
-		add_action( 'widgets_init', array( $this, 'register_sidebars' ), 10 );
+		add_action( 'widgets_init', array( $this, 'register_sidebars' ) );
 	}
 
 	/**

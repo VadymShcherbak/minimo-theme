@@ -1662,6 +1662,12 @@ a {
   text-decoration: none;
 }
 
+textarea {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+}
+
 .spacing-col-1 > [class*=col-] {
   margin-bottom: 100px;
 }
@@ -1691,9 +1697,13 @@ a {
 .va-main-menu li a {
   display: block;
   padding: 5px;
-  font-size: 14px;
+  font-size: 17px;
   text-transform: uppercase;
   color: inherit;
+  transition: all 0.4s ease;
+}
+.va-main-menu li a:hover {
+  color: #fd0000;
 }
 
 .va-home-page {
@@ -1759,9 +1769,57 @@ a {
 .textwidget p {
   font-size: 12px;
 }
+.textwidget a {
+  color: #626262;
+  transition: all 0.4s ease;
+}
+.textwidget a:hover {
+  color: #fd0000;
+}
 
 .wp-calendar-table {
   width: 100%;
+}
+
+.va-blog-pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.screen-reader-text {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+}
+.nav-links span, .nav-links a {
+  font-size: 30px;
+  padding: 5px;
+  color: #626262;
+  transition: all 0.4s ease;
+}
+.nav-links i {
+  font-size: 23px;
+}
+.nav-links a {
+  display: block;
+}
+.nav-links a:hover {
+  color: #f30808;
+}
+
+.comment-meta {
+  word-spacing: 3px;
+}
+
+.comment-edit-link,
+.comment-reply-link {
+  color: #2cc452;
+}
+
+.comment-reply-title a {
+  color: #2cc452;
 }
 
 .va-main-footer {
@@ -1798,9 +1856,16 @@ a {
   margin-right: 20px;
 }
 
+.va-social-widgets {
+  display: flex;
+}
 .va-social-widgets i {
   padding: 5px;
 }
 .va-social-widgets i:not(:last-child) {
   margin-right: 5px;
+}
+
+.widget-footer {
+  margin-bottom: 0;
 }
