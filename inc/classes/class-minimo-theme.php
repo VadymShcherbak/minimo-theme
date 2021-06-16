@@ -22,6 +22,7 @@ class Minimo_Theme {
 		Assets::get_instance();
 		Menu::get_instance();
 		Sidebar::get_instance();
+		Post_Type::get_instance();
 
 		$this->setup_hooks();
 	}

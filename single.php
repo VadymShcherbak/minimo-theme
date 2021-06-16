@@ -19,7 +19,7 @@ get_header();
 					?>
 					<?php the_post(); ?>
 					<div class="col-lg-9 col-md-9 col-sm-12">
-						<div class="va_post">
+						<article class="va_post">
 							<div class="va-post-img">
 								<?php echo get_the_post_thumbnail(); ?>
 							</div>
@@ -36,7 +36,7 @@ get_header();
 							<div class="va-post-content">
 								<?php the_content(); ?>
 							</div>
-						</div>
+						</article>
 					</div>
 				<?php endwhile; ?>
 				<div class="col-lg-3 col-md-3 col-sm-12 col-spacing-20">

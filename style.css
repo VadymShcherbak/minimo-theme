@@ -1668,7 +1668,7 @@ textarea {
   outline: 0;
 }
 
-.spacing-col-1 > [class*=col-] {
+.spacing-col-1 > [class*=col-]:not(:last-child) {
   margin-bottom: 100px;
 }
 
@@ -1739,6 +1739,9 @@ textarea {
   text-transform: uppercase;
   color: #b4ad9e;
   transition: all 0.4s ease;
+}
+.va-category a:not(:last-child) {
+  margin-right: 10px;
 }
 .va-category a:hover {
   color: #d71625;

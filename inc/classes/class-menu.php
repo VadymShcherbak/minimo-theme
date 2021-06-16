@@ -19,7 +19,6 @@ class Menu {
 	 * Construct.
 	 */
 	protected function __construct() {
-		// load class.
 		$this->setup_hooks();
 	}
 
@@ -27,7 +26,6 @@ class Menu {
 	 * Setup hooks.
 	 */
 	protected function setup_hooks() {
-		// actions and filters.
 
 		add_action( 'init', array( $this, 'register_menus' ) );
 	}

@@ -21,7 +21,7 @@ get_header();
 							?>
 							<?php the_post(); ?>
 							<div class="col-lg-6 col-md-6 col-sm-12">
-								<div class="va_post">
+								<article class="va_post">
 									<div class="va-post-img">
 										<a href="<?php echo esc_url( get_permalink() ); ?>">
 											<?php echo get_the_post_thumbnail(); ?>
@@ -44,25 +44,25 @@ get_header();
 									<div class="va-post-content">
 										<?php the_excerpt(); ?>
 									</div>
-								</div>
+								</article>
 							</div>
 						<?php endwhile; ?>
+						<div class="va-blog-pagination col-lg-12">
+							<?php
+							the_posts_pagination(
+								array(
+									'prev_text' => '<i class="fal fa-angle-left"></i>',
+									'next_text' => '<i class="fal fa-angle-right"></i>',
+								)
+							);
+							?>
+						</div>
 					</div>
 				<?php endif; ?>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-12 col-spacing-20">
 				<?php dynamic_sidebar( 'va-blog-sidebar' ); ?>
 			</div>
-		</div>
-		<div class="va-blog-pagination">
-			<?php
-			the_posts_pagination(
-				array(
-					'prev_text' => '<i class="fal fa-angle-left"></i>',
-					'next_text' => '<i class="fal fa-angle-right"></i>',
-				)
-			);
-			?>
 		</div>
 	</div>
 </section>

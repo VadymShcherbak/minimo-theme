@@ -47,7 +47,10 @@ textarea {
 //=======HELPER CLASSES=======//
 .spacing-col-1 {
 	> [class*='col-'] {
-		margin-bottom: 100px;
+
+		&:not(:last-child) {
+			margin-bottom: 100px;
+		}
 	}
 }
 
@@ -140,6 +143,10 @@ textarea {
 		text-transform: uppercase;
 		color: #b4ad9e;
 		transition: all .4s ease;
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
 
 		&:hover {
 			color: #d71625;
