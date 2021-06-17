@@ -1,8 +1,8 @@
 <?php
 /**
- * WP lesson
+ * Hotel posts page
  *
- * @package Merak
+ * @package Minimo
  */
 
 get_header();
@@ -10,8 +10,6 @@ get_header();
 
 	<section class="va-blog-wrapper">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-9 col-md-9 col-sm-12">
 					<?php
 					if ( have_posts() ) :
 						?>
@@ -55,11 +53,6 @@ get_header();
 							</div>
 						</div>
 					<?php endif; ?>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-12 col-spacing-20">
-					<?php dynamic_sidebar( 'va-blog-sidebar' ); ?>
-				</div>
-			</div>
 		</div>
 	</section>
 

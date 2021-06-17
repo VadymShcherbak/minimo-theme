@@ -1761,6 +1761,10 @@ textarea {
   color: #f30808;
 }
 
+.va-single-post-content {
+  margin-bottom: 30px;
+}
+
 .widget {
   margin-bottom: 20px;
 }

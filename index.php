@@ -1,8 +1,8 @@
 <?php
 /**
- * WP lesson
+ * Blog posts page
  *
- * @package Merak
+ * @package Minimo
  */
 
 get_header();

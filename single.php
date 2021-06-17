@@ -2,7 +2,7 @@
 /**
  * Single Post Page
  *
- * @package Merak
+ * @package Minimo
  */
 
 get_header();
