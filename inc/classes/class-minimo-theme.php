@@ -23,6 +23,7 @@ class Minimo_Theme {
 		Menu::get_instance();
 		Sidebar::get_instance();
 		Post_Type::get_instance();
+		Meta_Boxes::get_instance();
 
 		$this->setup_hooks();
 	}

@@ -27,5 +27,20 @@ require_once VA_MINIMO_DIR_PATH . '/inc/classes/class-menu.php';
 require_once VA_MINIMO_DIR_PATH . '/inc/helpers/helper.php';
 require_once VA_MINIMO_DIR_PATH . '/inc/classes/class-sidebar.php';
 require_once VA_MINIMO_DIR_PATH . '/inc/classes/class-post-type.php';
+require_once VA_MINIMO_DIR_PATH . '/inc/classes/class-meta-boxes.php';
 
 Minimo_Theme::get_instance();
+
+/**
+ * Meta box form.
+ *
+ * @param array $option Meta box form option.
+ */
+function va_meta_box_form( $option ) {
+	?>
+		<label for="<?php echo esc_html( $option['id'] ); ?>">
+		<?php esc_html( $option['title'] . ': ' ); ?>
+		</label>
+		<input type="text" name="<?php echo esc_html( $option['name'] ); ?>" id="<?php echo esc_html( $option['id'] ); ?>" value="<?php echo esc_html( $option['value'] ); ?>">
+		<?php
+}
