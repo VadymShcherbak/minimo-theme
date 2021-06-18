@@ -20,7 +20,7 @@ get_header();
 					<?php the_post(); ?>
 					<div class="col-lg-9 col-md-9 col-sm-12">
 						<article class="va_post">
-							<div class="va-post-img">
+							<div class="va-single-post-img">
 								<?php echo get_the_post_thumbnail(); ?>
 							</div>
 							<div class="va-category">

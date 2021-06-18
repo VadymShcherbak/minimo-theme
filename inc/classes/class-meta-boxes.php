@@ -28,6 +28,7 @@ class Meta_Boxes {
 	protected function setup_hooks() {
 		add_action( 'add_meta_boxes', array( $this, 'add_custom_meta_boxes' ) );
 		add_action( 'save_post', array( $this, 'save_price_meta_data' ) );
+		add_action( 'save_post', array( $this, 'save_address_meta_data' ) );
 	}
 
 	/**
@@ -141,6 +142,11 @@ class Meta_Boxes {
 				$post_id,
 				'_hotel_address',
 				esc_html( wp_unslash( $_POST['hotel_address'] ) )
+			);
+			update_post_meta(
+				$post_id,
+				'_hotel_country',
+				esc_html( wp_unslash( $_POST['hotel_country'] ) )
 			);
 		}
 	}

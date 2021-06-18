@@ -39,8 +39,8 @@ Minimo_Theme::get_instance();
 function va_meta_box_form( $option ) {
 	?>
 		<label for="<?php echo esc_html( $option['id'] ); ?>">
-		<?php esc_html( $option['title'] . ': ' ); ?>
+		<?php echo esc_html( $option['title'] . ': ' ); ?>
 		</label>
-		<input type="text" name="<?php echo esc_html( $option['name'] ); ?>" id="<?php echo esc_html( $option['id'] ); ?>" value="<?php echo esc_html( $option['value'] ); ?>">
+		<input type="text" name="<?php echo esc_html( $option['name'] ); ?>" id="<?php echo esc_html( $option['id'] ); ?>" value="<?php echo esc_html( $option['value'] ); ?>" style="margin: 5px 0; width: 100%">
 		<?php
 }

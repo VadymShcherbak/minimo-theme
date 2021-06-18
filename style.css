@@ -1718,18 +1718,27 @@ textarea {
 }
 
 .va-post-img {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .va-post-img img {
   width: 100%;
+  border-radius: 5px;
   transition: all 0.4s ease;
 }
 .va-post-img:hover img {
   opacity: 0.6;
 }
 
+.va-single-post-img {
+  margin-bottom: 15px;
+}
+.va-single-post-img img {
+  width: 100%;
+  border-radius: 5px;
+}
+
 .va-category {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 .va-category a {
@@ -1748,7 +1757,7 @@ textarea {
 }
 
 .va-post-title {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .va-post-title h4 {
   margin-bottom: 0;
@@ -1827,6 +1836,16 @@ textarea {
 
 .comment-reply-title a {
   color: #2cc452;
+}
+
+.hotel-location {
+  margin-bottom: 15px;
+}
+
+.hotel-location,
+.hotel-price {
+  font-family: "Ubuntu", sans-serif;
+  color: #9fa1a3;
 }
 
 .va-main-footer {
