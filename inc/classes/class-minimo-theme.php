@@ -32,7 +32,7 @@ class Minimo_Theme {
 	 * Setup hooks.
 	 */
 	protected function setup_hooks() {
-		add_action( 'after_setup_theme', array( $this, 'setup_theme' ), 11 );
+		add_action( 'after_setup_theme', array( $this, 'setup_theme' ), 10 );
 	}
 
 	/**

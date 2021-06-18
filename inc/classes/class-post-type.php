@@ -26,8 +26,8 @@ class Post_Type {
 	 * Setup hooks.
 	 */
 	protected function setup_hooks() {
-		add_action( 'init', array( $this, 'va_create_taxonomy' ), 11 );
-		add_action( 'init', array( $this, 'va_post_type' ), 20 );
+		add_action( 'init', array( $this, 'va_create_taxonomy' ), 10 );
+		add_action( 'init', array( $this, 'va_post_type' ), 10 );
 	}
 
 	/**

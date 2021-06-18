@@ -27,7 +27,7 @@ class Assets {
 	protected function setup_hooks() {
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_styles' ), 10 );
-		add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts' ), 20 );
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts' ), 10 );
 	}
 
 	/**
