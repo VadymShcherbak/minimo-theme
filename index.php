@@ -60,9 +60,7 @@ get_header();
 					</div>
 				<?php endif; ?>
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-12 col-spacing-20">
-				<?php dynamic_sidebar( 'va-blog-sidebar' ); ?>
-			</div>
+			<?php get_sidebar(); ?>
 		</div>
 	</div>
 </section>

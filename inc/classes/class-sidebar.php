@@ -1,8 +1,8 @@
 <?php
 /**
- * Register sidebar.
+ * Register sidebar
  *
- * @package Merak
+ * @package Minimo
  */
 
 namespace MINIMO_THEME_VADYM\inc;

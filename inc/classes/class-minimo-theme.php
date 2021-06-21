@@ -24,6 +24,7 @@ class Minimo_Theme {
 		Sidebar::get_instance();
 		Post_Type::get_instance();
 		Meta_Boxes::get_instance();
+		Shortcodes::get_instance();
 
 		$this->setup_hooks();
 	}

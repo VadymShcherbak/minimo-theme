@@ -1848,6 +1848,15 @@ textarea {
   color: #9fa1a3;
 }
 
+.va-last-hotels a {
+  color: #626262;
+  transition: color 0.4s ease;
+  font-size: 20px;
+}
+.va-last-hotels a:hover {
+  color: #f30808;
+}
+
 .va-main-footer {
   padding-top: 40px;
   padding-bottom: 40px;

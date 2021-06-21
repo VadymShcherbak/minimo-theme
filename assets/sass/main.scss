@@ -276,6 +276,19 @@ textarea {
 	color: #9fa1a3;
 }
 
+.va-last-hotels {
+
+	a {
+		color: #626262;
+		transition: color .4s ease;
+		font-size: 20px;
+
+		&:hover {
+			color: #f30808;
+		}
+	}
+}
+
 //=======================================
 // FOOTER MENU
 // ======================================

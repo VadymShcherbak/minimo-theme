@@ -10,7 +10,7 @@ namespace MINIMO_THEME_VADYM\inc;
 use MINIMO_THEME_VADYM\Inc\Traits\Singleton;
 use MINIMO_THEME_VADYM\inc\Meta_Boxes\Hotel_Options;
 /**
- * Merak theme
+ * Minimo theme
  */
 class Meta_Boxes {
 	use Singleton;

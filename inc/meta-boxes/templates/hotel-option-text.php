@@ -1,3 +1,12 @@
+<?php
+/**
+ * Hotel option HTML
+ *
+ * @package Minimo
+ */
+
+?>
+
 <label for="<?php echo esc_html( $args['id'] ); ?>">
 	<?php echo esc_html( $args['title'] . ': ' ); ?>
 </label>
