@@ -11,7 +11,7 @@ use MINIMO_THEME_VADYM\Inc\Traits\Singleton;
 use MINIMO_THEME_VADYM\inc\shortcodes\Last_Hotels;
 
 /**
- * Merak theme
+ * Minimo theme
  */
 class Shortcodes {
 	use Singleton;
