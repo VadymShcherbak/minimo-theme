@@ -49,38 +49,38 @@ class Hotel_Options {
 	 * @param object $post Hotel post.
 	 */
 	public function address_meta_box_html( $post ) {
-		$price         = get_post_meta( $post->ID, '_hotel_price', true );
-		$hotel_address = get_post_meta( $post->ID, '_hotel_address', true );
-		$hotel_country = get_post_meta( $post->ID, '_hotel_country', true );
+		$price         = get_post_meta( get_the_ID(), '_hotel_price', true );
+		$hotel_address = get_post_meta( get_the_ID(), '_hotel_address', true );
+		$hotel_country = get_post_meta( get_the_ID(), '_hotel_country', true );
 
 		wp_nonce_field( plugin_basename( __FILE__ ), 'hotel-option' );
 
 		get_template_part(
-			'inc/meta-boxes/templates/hotel-option',
+			'inc/meta-boxes/hotels/templates/hotel-option',
 			'text',
 			array(
 				'id'    => 'hotel_price',
-				'title' => __( 'Price', 'minimo' ),
+				'title' => esc_html__( 'Price', 'minimo' ),
 				'name'  => 'hotel_price',
 				'value' => $price,
 			)
 		);
 		get_template_part(
-			'inc/meta-boxes/templates/hotel-option',
+			'inc/meta-boxes/hotels/templates/hotel-option',
 			'text',
 			array(
 				'id'    => 'hotel_address',
-				'title' => __( 'Address', 'minimo' ),
+				'title' => esc_html__( 'Address', 'minimo' ),
 				'name'  => 'hotel_address',
 				'value' => $hotel_address,
 			)
 		);
 		get_template_part(
-			'inc/meta-boxes/templates/hotel-option',
+			'inc/meta-boxes/hotels/templates/hotel-option',
 			'text',
 			array(
 				'id'    => 'hotel_country',
-				'title' => __( 'Country', 'minimo' ),
+				'title' => esc_html__( 'Country', 'minimo' ),
 				'name'  => 'hotel_country',
 				'value' => $hotel_country,
 			)

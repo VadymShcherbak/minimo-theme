@@ -27,7 +27,7 @@ class Meta_Boxes {
 	 * Require class hotel options.
 	 */
 	public function require_meta_boxes() {
-		require_once VA_MINIMO_DIR_PATH . '/inc/meta-boxes/class-hotel-options.php';
+		require_once VA_MINIMO_DIR_PATH . '/inc/meta-boxes/hotels/class-hotel-options.php';
 	}
 
 	/**

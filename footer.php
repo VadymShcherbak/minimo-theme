@@ -22,7 +22,7 @@
 			?>
 			<div class="va-footer-widgets">
 				<div class="va-footer-text">
-					<p>Follow</p>
+					<p><?php esc_html_e( 'Follow' ); ?></p>
 				</div>
 				<div class="va-social-widgets">
 					<?php dynamic_sidebar( 'va-footer-sidebar' ); ?>

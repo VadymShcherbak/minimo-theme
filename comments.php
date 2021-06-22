@@ -38,7 +38,7 @@ $minimo_comment_count = get_comments_number();
 				);
 				?>
 			<?php endif; ?>
-		</h2><!-- .comments-title -->
+		</h2>
 
 		<ol class="comment-list">
 			<?php
@@ -50,7 +50,7 @@ $minimo_comment_count = get_comments_number();
 				)
 			);
 			?>
-		</ol><!-- .comment-list -->
+		</ol>
 
 		<?php
 		the_comments_pagination(
@@ -78,5 +78,4 @@ $minimo_comment_count = get_comments_number();
 		)
 	);
 	?>
-
-</div><!-- #comments -->
+</div>

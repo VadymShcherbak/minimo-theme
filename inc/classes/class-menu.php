@@ -26,8 +26,7 @@ class Menu {
 	 * Setup hooks.
 	 */
 	protected function setup_hooks() {
-
-		add_action( 'init', array( $this, 'register_menus' ) );
+		add_action( 'init', array( $this, 'register_menus' ), 10 );
 	}
 
 	/**

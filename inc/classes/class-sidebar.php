@@ -10,7 +10,7 @@ namespace MINIMO_THEME_VADYM\inc;
 use MINIMO_THEME_VADYM\Inc\Traits\Singleton;
 
 /**
- * Merak theme
+ * Minimo sidebar.
  */
 class Sidebar {
 	use Singleton;
@@ -26,7 +26,7 @@ class Sidebar {
 	 * Setup hooks
 	 */
 	protected function setup_hooks() {
-		add_action( 'widgets_init', array( $this, 'register_sidebars' ) );
+		add_action( 'widgets_init', array( $this, 'register_sidebars' ), 10 );
 	}
 
 	/**
@@ -35,9 +35,9 @@ class Sidebar {
 	public function register_sidebars() {
 		register_sidebar(
 			array(
-				'name'          => __( 'Sidebar', 'minimo' ),
+				'name'          => esc_html__( 'Sidebar', 'minimo' ),
 				'id'            => 'va-blog-sidebar',
-				'description'   => __( 'Main sidebar', 'minimo' ),
+				'description'   => esc_html__( 'Main sidebar', 'minimo' ),
 				'before_widget' => '<div id="%1$s" class="widget widget-sidebar %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -46,9 +46,9 @@ class Sidebar {
 		);
 		register_sidebar(
 			array(
-				'name'          => __( 'Footer', 'minimo' ),
+				'name'          => esc_html__( 'Footer', 'minimo' ),
 				'id'            => 'va-footer-sidebar',
-				'description'   => __( 'Footer sidebar', 'minimo' ),
+				'description'   => esc_html__( 'Footer sidebar', 'minimo' ),
 				'before_widget' => '<div id="%1$s" class="widget widget-footer %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3 class="widget-title">',

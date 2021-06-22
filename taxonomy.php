@@ -34,10 +34,11 @@ get_header();
 									<?php echo get_the_term_list( get_the_ID(), 'taxonomy' ); ?>
 								</div>
 								<?php if ( $price ) : ?>
-									<div class="hotel-price">Price:
+									<div class="hotel-price">
+										<?php esc_html_e( 'Price:' ); ?>
 										<span>
-													<?php echo esc_html( $price ); ?>
-												</span>
+											<?php echo esc_html( $price ); ?>
+										</span>
 									</div>
 								<?php endif; ?>
 								<?php if ( $hotel_address || $hotel_country ) : ?>

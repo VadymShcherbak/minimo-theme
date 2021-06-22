@@ -26,8 +26,8 @@ require_once VA_MINIMO_DIR_PATH . '/inc/classes/class-assets.php';
 require_once VA_MINIMO_DIR_PATH . '/inc/classes/class-menu.php';
 require_once VA_MINIMO_DIR_PATH . '/inc/helpers/helper.php';
 require_once VA_MINIMO_DIR_PATH . '/inc/classes/class-sidebar.php';
-require_once VA_MINIMO_DIR_PATH . '/inc/classes/class-post-type.php';
-require_once VA_MINIMO_DIR_PATH . '/inc/classes/class-meta-boxes.php';
+require_once VA_MINIMO_DIR_PATH . '/inc/classes/class-post-types.php';
+require_once VA_MINIMO_DIR_PATH . '/inc/meta-boxes/class-meta-boxes.php';
 require_once VA_MINIMO_DIR_PATH . '/inc/classes/class-shortcodes.php';
 
 Minimo_Theme::get_instance();
