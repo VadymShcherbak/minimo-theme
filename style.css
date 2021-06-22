@@ -1857,6 +1857,22 @@ textarea {
   color: #f30808;
 }
 
+.va-hotel-widget-wrapper a {
+  color: #626262;
+  font-size: 22px;
+  transition: color 0.4s ease;
+}
+.va-hotel-widget-wrapper a:hover {
+  color: #f30808;
+}
+.va-hotel-widget-wrapper li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.category-hotel-widget h3 {
+  border-bottom: 2px solid #626262;
+}
+
 .va-main-footer {
   padding-top: 40px;
   padding-bottom: 40px;

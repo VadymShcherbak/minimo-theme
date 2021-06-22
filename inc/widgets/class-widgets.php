@@ -34,13 +34,13 @@ class Widgets {
 	 * Require widget.
 	 */
 	public function require_widgets() {
-		require_once VA_MINIMO_DIR_PATH . '/inc/widget/class_category_hotel_widget';
+		require_once VA_MINIMO_DIR_PATH . '/inc/widgets/hotels/class-category-hotel-widget.php';
 	}
 
 	/**
 	 * Register widget.
 	 */
 	public function register_widgets() {
-		register_widget( 'MINIMO_THEME_VADYM\Inc\Widget\Category_Hotel_Widget' );
+		register_widget( 'MINIMO_THEME_VADYM\Inc\Widgets\Category_Hotel_Widget' );
 	}
 }

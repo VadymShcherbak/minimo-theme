@@ -10,9 +10,9 @@ namespace MINIMO_THEME_VADYM\inc;
 use MINIMO_THEME_VADYM\Inc\Traits\Singleton;
 
 /**
- * Merak theme.
+ * Minimo post types.
  */
-class Post_Type {
+class Post_Types {
 	use Singleton;
 
 	/**
@@ -26,15 +26,15 @@ class Post_Type {
 	 * Setup hooks.
 	 */
 	protected function setup_hooks() {
-		add_action( 'init', array( $this, 'create_post_type' ), 10 );
+		add_action( 'init', array( $this, 'create_hotel_post_type' ), 10 );
 	}
 
 	/**
-	 * Create Taxonomy Hotel Category
+	 * Create Taxonomy and post types
 	 */
-	public function create_post_type() {
+	public function create_hotel_post_type() {
 		register_taxonomy(
-			'taxonomy',
+			'hotel_category',
 			array( 'hotel' ),
 			array(
 				'label'             => '',

@@ -22,9 +22,10 @@ class Minimo_Theme {
 		Assets::get_instance();
 		Menu::get_instance();
 		Sidebar::get_instance();
-		Post_Type::get_instance();
+		Post_Types::get_instance();
 		Meta_Boxes::get_instance();
 		Shortcodes::get_instance();
+		Widgets::get_instance();
 
 		$this->setup_hooks();
 	}

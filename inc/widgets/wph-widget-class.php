@@ -13,7 +13,7 @@
  * @version      1.6
  */
 
-namespace MINIMO_THEME_VADYM\inc;
+namespace MINIMO_THEME_VADYM\Inc;
 
 use MINIMO_THEME_VADYM\Inc\Traits\Singleton;
 use WP_Widget;
@@ -34,8 +34,10 @@ if ( ! class_exists( 'WPH_Widget' ) ) {
 		 * @since    1.0
 		 */
 
+		use Singleton;
+
 		function create_widget( $args ) {
-			// settings some defaults
+			// settings some defaults.
 			$defaults = array(
 				'label'       => '',
 				'description' => '',
@@ -43,17 +45,17 @@ if ( ! class_exists( 'WPH_Widget' ) ) {
 				'options'     => array(),
 			);
 
-			// parse and merge args with defaults
+			// parse and merge args with defaults.
 			$args = wp_parse_args( $args, $defaults );
 
-			// extract each arg to its own variable
+			// extract each arg to its own variable.
 			extract( $args, EXTR_SKIP );
 
-			// set the widget vars
+			// set the widget vars.
 			$this->slug   = sanitize_title( $label );
 			$this->fields = $fields;
 
-			// check options
+			// check options.
 			$this->options = array(
 				'classname'   => $this->slug,
 				'description' => $description,
@@ -62,7 +64,7 @@ if ( ! class_exists( 'WPH_Widget' ) ) {
 				$this->options = array_merge( $this->options, $options );
 			}
 
-			// call WP_Widget to create the widget
+			// call WP_Widget to create the widget.
 			parent::__construct( $this->slug, $label, $this->options );
 
 		}

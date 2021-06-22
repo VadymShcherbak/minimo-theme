@@ -27,7 +27,7 @@ get_header();
 								<?php echo get_the_post_thumbnail(); ?>
 							</div>
 							<div class="va-category">
-								<?php echo get_the_term_list( get_the_ID(), 'taxonomy' ); ?>
+								<?php echo get_the_term_list( get_the_ID(), 'hotel_category' ); ?>
 							</div>
 							<?php if ( $price ) : ?>
 								<div class="hotel-price">

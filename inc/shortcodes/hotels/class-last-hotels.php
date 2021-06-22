@@ -38,7 +38,7 @@ class Last_Hotels {
 		ob_start();
 
 		get_template_part(
-			'inc/shortcodes/templates/last',
+			'inc/shortcodes/hotels/templates/last',
 			'hotels',
 			array(
 				'last_hotels' => $last_hotels,

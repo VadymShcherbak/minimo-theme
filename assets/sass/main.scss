@@ -289,6 +289,32 @@ textarea {
 	}
 }
 
+.va-hotel-widget-wrapper {
+
+	a {
+		color: #626262;
+		font-size: 22px;
+		transition: color .4s ease;
+
+		&:hover {
+			color: #f30808;
+		}
+	}
+
+	li {
+		&:not(:last-child) {
+			margin-bottom: 5px;
+		}
+	}
+}
+
+.category-hotel-widget {
+
+	h3 {
+		border-bottom: 2px solid #626262;
+	}
+}
+
 //=======================================
 // FOOTER MENU
 // ======================================

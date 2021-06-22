@@ -28,7 +28,7 @@ class Shortcodes {
 	 * Require shortcodes.
 	 */
 	public function require_shortcodes() {
-		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/class-last-hotels.php';
+		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/hotels/class-last-hotels.php';
 	}
 
 	/**
