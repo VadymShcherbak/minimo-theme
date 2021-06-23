@@ -50,6 +50,7 @@ class Hotel_Options {
 		$price         = get_post_meta( get_the_ID(), '_hotel_price', true );
 		$hotel_address = get_post_meta( get_the_ID(), '_hotel_address', true );
 		$hotel_country = get_post_meta( get_the_ID(), '_hotel_country', true );
+		$id_images     = get_post_meta( get_the_ID(), '_hotel_gallery', true );
 
 		wp_nonce_field( plugin_basename( __FILE__ ), 'hotel-option' );
 
@@ -81,6 +82,15 @@ class Hotel_Options {
 				'name'  => 'hotel_country',
 				'class' => 'widefat',
 				'value' => $hotel_country,
+			)
+		);
+		va_show_template_meta_box(
+			array(
+				'type'  => 'gallery',
+				'id'    => '$id_images',
+				'title' => esc_html__( 'Gallery', 'minimo' ),
+				'name'  => 'hotel_id_gallery',
+				'class' => 'hotel_custom_img_id',
 			)
 		);
 	}
@@ -118,6 +128,15 @@ class Hotel_Options {
 				$post_id,
 				'_hotel_country',
 				esc_html( wp_unslash( $_POST['hotel_country'] ) )
+			);
+		}
+		if ( isset( $_POST['hotel_id_gallery'] ) ) {
+			$id_photos = explode( ',', esc_html( wp_unslash( $_POST['hotel_id_gallery'] ) ) );
+
+			update_post_meta(
+				$post_id,
+				'_hotel_gallery',
+				$id_photos,
 			);
 		}
 	}

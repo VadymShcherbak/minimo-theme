@@ -3,6 +3,7 @@
  * Hotel option HTML
  *
  * @package Minimo
+ * @var array $args Args data.
  */
 
 ?>
