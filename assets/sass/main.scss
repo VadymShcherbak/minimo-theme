@@ -2,7 +2,6 @@
 @import './bootstrap-grid.scss';
 @import './reset.scss';
 
-
 body {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
@@ -97,7 +96,11 @@ textarea {
 		}
 }
 
-//=======================================
+.current-menu-item {
+	color: #fd0000;
+}
+
+	//=======================================
 // HOME
 // ======================================
 

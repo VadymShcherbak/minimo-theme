@@ -13,7 +13,7 @@
 	<button class="button va-custom-img">
 		<?php esc_html__( 'Add photo hotel', 'minimo' ); ?>
 	</button>
-	<input type="hidden" class="<?php echo esc_html( $args['class'] ); ?>" name="<?php echo esc_html( $args['name'] ); ?>" value="<?php echo esc_html( ( $args['id_images'] ) ? implode( ',', $args['id_images'] ) : '' ); ?>">
+	<input type="hidden" class="va-custom-img-id <?php echo esc_html( $args['class'] ); ?>" name="<?php echo esc_html( $args['name'] ); ?>" value="<?php echo esc_html( ( $args['id_images'] ) ? implode( ',', $args['id_images'] ) : '' ); ?>">
 	<div class="va-custom-img-wrapper">
 		<?php if ( $args['id_images'] ) : ?>
 			<?php foreach ( $args['id_images'] as $id_image ) : ?>
