@@ -131,7 +131,11 @@ class Hotel_Options {
 			);
 		}
 		if ( isset( $_POST['hotel_id_gallery'] ) ) {
-			$id_photos = explode( ',', esc_html( wp_unslash( $_POST['hotel_id_gallery'] ) ) );
+			$id_photos = '';
+
+			if ( wp_unslash( $_POST['hotel_id_gallery'] ) ) {
+				$id_photos = explode( ',', esc_html( wp_unslash( $_POST['hotel_id_gallery'] ) ) );
+			}
 
 			update_post_meta(
 				$post_id,

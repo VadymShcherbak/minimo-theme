@@ -28,7 +28,8 @@ class Assets {
 	protected function setup_hooks() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_styles' ), 10 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts' ), 10 );
-		add_action( 'admin_enqueue_scripts', array( $this, 'register_admin_style_scripts' ), 10 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'register_admin_scripts' ), 10 );
+		add_action( 'admin_enqueue_styles', array( $this, 'register_admin_styles' ), 10 );
 	}
 
 	/**
@@ -53,12 +54,19 @@ class Assets {
 	}
 
 	/**
-	 * Register style and scripts for admin panel.
+	 * Register admin panel style.
 	 */
-	public function register_admin_style_scripts() {
+	public function register_admin_styles() {
 		wp_enqueue_style( 'fontawesome', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css', array(), 'VA_MINIMO_VERSION' );
 		wp_enqueue_style( 'admin-panel-style', VA_MINIMO_DIR_URI . '/assets/css/admin-panel.css', array(), 'VA_MINIMO_VERSION' );
-		wp_enqueue_script( 'admin-script', VA_MINIMO_DIR_URI . '/assets/js/admin-panel.js', array(), 'VA_MINIMO_VERSION', true );
+	}
+
+	/**
+	 * Register scripts for admin panel.
+	 */
+	public function register_admin_scripts() {
+		wp_enqueue_script( 'jquery' );
+		wp_enqueue_script( 'admin-panel', VA_MINIMO_DIR_URI . '/assets/js/admin-panel.js', array( 'jquery' ), 'VA_MINIMO_VERSION', true );
 	}
 }
 
