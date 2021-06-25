@@ -21,6 +21,7 @@ get_header();
 						$price         = get_post_meta( get_the_ID(), '_hotel_price', true );
 						$hotel_address = get_post_meta( get_the_ID(), '_hotel_address', true );
 						$hotel_country = get_post_meta( get_the_ID(), '_hotel_country', true );
+						$hotel_gallery = get_post_meta( get_the_ID(), '_hotel_gallery', true );
 						?>
 						<article class="va_post">
 							<div class="va-single-post-img">
@@ -51,6 +52,15 @@ get_header();
 							<div class="va-post-content va-single-post-content">
 								<?php the_content(); ?>
 							</div>
+							<?php if ( isset( $hotel_gallery ) && ! empty( $hotel_gallery ) ) : ?>
+								<div class="main-carousel">
+									<?php foreach ( $hotel_gallery as $hotel_img ) : ?>
+										<div class="carousel-cell">
+											<img src="<?php echo esc_url( wp_get_attachment_url( $hotel_img ) ); ?>" alt="Hotel img">
+										</div>
+									<?php endforeach; ?>
+								</div>
+							<?php endif; ?>
 						</article>
 					<?php endwhile; ?>
 			<?php endif; ?>

@@ -1877,6 +1877,17 @@ textarea {
   border-bottom: 2px solid #626262;
 }
 
+.main-carousel {
+  margin-bottom: 50px;
+}
+
+.carousel-cell {
+  width: 100%;
+}
+.carousel-cell img {
+  width: 100%;
+}
+
 .va-main-footer {
   padding-top: 40px;
   padding-bottom: 40px;
