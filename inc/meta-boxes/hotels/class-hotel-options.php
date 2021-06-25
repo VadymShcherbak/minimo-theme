@@ -60,7 +60,6 @@ class Hotel_Options {
 				'id'    => 'hotel_price',
 				'title' => esc_html__( 'Price', 'minimo' ),
 				'name'  => 'hotel_price',
-				'class' => 'widefat',
 				'value' => $price,
 			)
 		);
@@ -70,7 +69,6 @@ class Hotel_Options {
 				'id'    => 'hotel_address',
 				'title' => esc_html__( 'Address', 'minimo' ),
 				'name'  => 'hotel_address',
-				'class' => 'widefat',
 				'value' => $hotel_address,
 			)
 		);
@@ -80,17 +78,16 @@ class Hotel_Options {
 				'id'    => 'hotel_country',
 				'title' => esc_html__( 'Country', 'minimo' ),
 				'name'  => 'hotel_country',
-				'class' => 'widefat',
 				'value' => $hotel_country,
 			)
 		);
 		va_show_template_meta_box(
 			array(
-				'type'  => 'gallery',
-				'id'    => '$id_images',
-				'title' => esc_html__( 'Gallery', 'minimo' ),
-				'name'  => 'hotel_id_gallery',
-				'class' => 'hotel_custom_img_id',
+				'type'     => 'gallery',
+				'id'       => '_hotel_gallery',
+				'title'    => esc_html__( 'Gallery', 'minimo' ),
+				'value'    => $id_images,
+				'multiple' => true,
 			)
 		);
 	}
@@ -130,11 +127,11 @@ class Hotel_Options {
 				esc_html( wp_unslash( $_POST['hotel_country'] ) )
 			);
 		}
-		if ( isset( $_POST['hotel_id_gallery'] ) ) {
+		if ( isset( $_POST['_hotel_gallery'] ) ) {
 			$id_photos = '';
 
-			if ( wp_unslash( $_POST['hotel_id_gallery'] ) ) {
-				$id_photos = explode( ',', esc_html( wp_unslash( $_POST['hotel_id_gallery'] ) ) );
+			if ( ! empty( $_POST['_hotel_gallery'] ) ) {
+				$id_photos = explode( ',', wp_unslash( $_POST['_hotel_gallery'] ) );
 			}
 
 			update_post_meta(

@@ -19,12 +19,12 @@ function ar( $data ) {
 /**
  * Show template meta boxes.
  *
- * @param array $data Attribute.
+ * @param array $args Attribute.
  */
-function va_show_template_meta_box( $data ) {
+function va_show_template_meta_box( $args ) {
 	get_template_part(
 		'inc/meta-boxes/hotels/templates/hotel-option',
-		$data['type'],
-		$data
+		$args['type'],
+		$args
 	);
 }

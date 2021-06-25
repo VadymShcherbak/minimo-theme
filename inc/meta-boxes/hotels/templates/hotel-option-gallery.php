@@ -6,17 +6,20 @@
  * @var array $args Args data.
  */
 
+$id_img_string = $args['value'] ? implode( ',', $args['value'] ) : '';
 ?>
 
-<div id="gallery-minimo">
-	<label><?php echo esc_html( $args['title'] ); ?></label>
+<div id="gallery-minimo" class="hotel-gallery">
+	<label>
+		<?php echo esc_html( $args['title'] ); ?>
+	</label><br>
 	<button class="button va-custom-img">
-		<?php esc_html__( 'Add photo hotel', 'minimo' ); ?>
+		<?php echo esc_html__( 'Add photo hotel', 'minimo' ); ?>
 	</button>
-	<input type="hidden" class="va-custom-img-id <?php echo esc_html( $args['class'] ); ?>" name="<?php echo esc_html( $args['name'] ); ?>" value="<?php echo esc_html( ( $args['id_images'] ) ? implode( ',', $args['id_images'] ) : '' ); ?>">
+	<input type="hidden" class="va-custom-img-id" name="<?php echo esc_attr( $args['id'] ); ?>" value="<?php echo esc_attr( $id_img_string ); ?>">
 	<div class="va-custom-img-wrapper">
-		<?php if ( $args['id_images'] ) : ?>
-			<?php foreach ( $args['id_images'] as $id_image ) : ?>
+		<?php if ( isset( $args['value'] ) && ! empty( $args['value'] ) ) : ?>
+			<?php foreach ( $args['value'] as $id_image ) : ?>
 				<div class="va-custom-img-gallery" data-id="<?php echo esc_html( $id_image ); ?>">
 					<img src="<?php echo esc_url( wp_get_attachment_url( $id_image ) ); ?>" alt="hotel img">
 					<button class="va-remove-img">

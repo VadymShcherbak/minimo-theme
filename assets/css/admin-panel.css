@@ -1,0 +1,21 @@
+.hotel-gallery {
+	margin-top: 10px;
+}
+
+.va-custom-img-gallery {
+	position: relative;
+}
+
+.va-custom-img-gallery img {
+	width: 100%;
+}
+
+.va-custom-img-wrapper {
+	margin-top: 10px;
+}
+
+.va-remove-img {
+	position: absolute;
+	top: 3px;
+	right: 3px;
+}

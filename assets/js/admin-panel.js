@@ -11,8 +11,8 @@
 				let frame;
 				let $metaBox    = $( this );
 				let $addImgLink = $metaBox.find( '.va-custom-img' );
-				let $imgWrapper = $metaBox.find( 'va-custom-img-wrapper' );
-				let $imgIdInput = $metaBox.find( 'va-custom-img-id' );
+				let $imgWrapper = $metaBox.find( '.va-custom-img-wrapper' );
+				let $imgIdInput = $metaBox.find( '.va-custom-img-id' );
 
 
 				$addImgLink.on(
@@ -40,13 +40,13 @@
 							function () {
 								let attachment   = frame.state().get( 'selection' ).toJSON();
 								let idPhoto      = [];
-								let idPhotoInput = $imgIdInput.val() ? $imgIdInput + ',' : $imgIdInput.val();
+								let idPhotoInput = $imgIdInput.val() ? $imgIdInput.val() + ',' : $imgIdInput.val();
 
 								for ( let i = 0; i < attachment.length; i++ ) {
-									idPhoto[i] = attachment[i][id];
+									idPhoto[i] = attachment[i]['id'];console.log( idPhotoInput );
 									$imgWrapper.append(
-										`<div class="va-custom-img-gallery" data-id="${attachment[i][id]}">
-											<img src="${attachment[i][url]}" alt="photo hotel">
+										`<div class="va-custom-img-gallery" data-id="${attachment[i]['id']}">
+											<img src="${attachment[i]['url']}" alt="photo hotel">
 											<button class="va-remove-img">
 												<i class="fas fa-times"></i>
 											</button>
@@ -66,7 +66,7 @@
 	function vaRemovePhoto() {
 		$( document ).on(
 			'click',
-			'va-remove-img',
+			'.va-remove-img',
 			function ( event ) {
 				event.preventDefault();
 
@@ -75,7 +75,7 @@
 				let $input      = $this.parents( '#gallery-minimo' ).find( '.va-custom-img-id' );
 				let $inputValue = $input.val().split( ',' );
 
-				$inputValue.splice( $.inArray( $idPhoto, $inputValue ) + 1 );
+				$inputValue.splice( $.inArray( $idPhoto, $inputValue ), 1 );
 				$input.val( $inputValue.join() );
 				$this.parent().slideUp();
 			}
