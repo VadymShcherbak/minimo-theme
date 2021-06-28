@@ -27,7 +27,7 @@ class Meta_Boxes {
 	 * Require class hotel options.
 	 */
 	public function require_meta_boxes() {
-		require_once VA_MINIMO_DIR_PATH . '/inc/meta-boxes/hotels/class-hotel-options.php';
+		require_once VA_MINIMO_DIR_PATH . '/inc/options/metaboxes/class-hotel-options.php';
 	}
 
 	/**
@@ -35,5 +35,19 @@ class Meta_Boxes {
 	 */
 	public function init_meta_boxes() {
 		Hotel_Options::get_instance();
+	}
+
+	/**
+	 * Intended for output of arrays.
+	 *
+	 * @param array  $args Attribute.
+	 * @param string $template_type Template type.
+	 */
+	public static function va_show_template_meta_box( $args, $template_type ) {
+		get_template_part(
+			'inc/options/fields/' . $template_type,
+			'',
+			$args
+		);
 	}
 }

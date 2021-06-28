@@ -5,8 +5,9 @@
  * @package Minimo
  */
 
-namespace MINIMO_THEME_VADYM\inc\Meta_Boxes;
+namespace MINIMO_THEME_VADYM\Inc\Meta_Boxes;
 
+use MINIMO_THEME_VADYM\inc\Meta_Boxes;
 use MINIMO_THEME_VADYM\Inc\Traits\Singleton;
 
 /**
@@ -54,41 +55,41 @@ class Hotel_Options {
 
 		wp_nonce_field( plugin_basename( __FILE__ ), 'hotel-option' );
 
-		va_show_template_meta_box(
+		Meta_Boxes::va_show_template_meta_box(
 			array(
-				'type'  => 'text',
 				'id'    => 'hotel_price',
 				'title' => esc_html__( 'Price', 'minimo' ),
 				'name'  => 'hotel_price',
 				'value' => $price,
-			)
+			),
+			'text'
 		);
-		va_show_template_meta_box(
+		Meta_Boxes::va_show_template_meta_box(
 			array(
-				'type'  => 'text',
 				'id'    => 'hotel_address',
 				'title' => esc_html__( 'Address', 'minimo' ),
 				'name'  => 'hotel_address',
 				'value' => $hotel_address,
-			)
+			),
+			'text'
 		);
-		va_show_template_meta_box(
+		Meta_Boxes::va_show_template_meta_box(
 			array(
-				'type'  => 'text',
 				'id'    => 'hotel_country',
 				'title' => esc_html__( 'Country', 'minimo' ),
 				'name'  => 'hotel_country',
 				'value' => $hotel_country,
-			)
+			),
+			'text'
 		);
-		va_show_template_meta_box(
+		Meta_Boxes::va_show_template_meta_box(
 			array(
-				'type'     => 'gallery',
 				'id'       => '_hotel_gallery',
 				'title'    => esc_html__( 'Gallery', 'minimo' ),
 				'value'    => $id_images,
 				'multiple' => true,
-			)
+			),
+			'gallery'
 		);
 	}
 
