@@ -21,30 +21,7 @@ get_header();
 							?>
 							<?php the_post(); ?>
 							<div class="col-lg-6 col-md-6 col-sm-12">
-								<article class="va_post">
-									<div class="va-post-img">
-										<a href="<?php echo esc_url( get_permalink() ); ?>">
-											<?php echo get_the_post_thumbnail(); ?>
-										</a>
-									</div>
-									<div class="va-category">
-										<?php foreach ( get_the_category() as $category ) : ?>
-											<a href="<?php echo esc_url( get_category_link( $category ) ); ?>">
-												<?php echo esc_html( $category->name ); ?>
-											</a>
-										<?php endforeach; ?>
-									</div>
-									<div class="va-post-title">
-										<h4>
-											<a href="<?php the_permalink(); ?>">
-												<?php the_title(); ?>
-											</a>
-										</h4>
-									</div>
-									<div class="va-post-content">
-										<?php the_excerpt(); ?>
-									</div>
-								</article>
+								<?php get_template_part( '/template-parts/blog', 'content' ); ?>
 							</div>
 						<?php endwhile; ?>
 						<div class="va-blog-pagination col-lg-12">

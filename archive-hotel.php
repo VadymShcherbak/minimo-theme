@@ -16,47 +16,10 @@ get_header();
 					if ( have_posts() ) :
 						?>
 						<div class="row spacing-col-1">
-							<?php
-							while ( have_posts() ) :
-								?>
-								<?php
-								the_post();
-								$price         = get_post_meta( get_the_ID(), '_hotel_price', true );
-								$hotel_address = get_post_meta( get_the_ID(), '_hotel_address', true );
-								$hotel_country = get_post_meta( get_the_ID(), '_hotel_country', true );
-								?>
+							<?php while ( have_posts() ) : ?>
+								<?php the_post(); ?>
 								<div class="col-lg-6 col-md-6 col-sm-12">
-									<article class="va_post">
-										<div class="va-post-img">
-											<a href="<?php echo esc_url( get_permalink() ); ?>">
-												<?php echo get_the_post_thumbnail(); ?>
-											</a>
-										</div>
-										<div class="va-category">
-											<?php echo get_the_term_list( get_the_ID(), 'hotel_category' ); ?>
-										</div>
-										<?php if ( $price ) : ?>
-											<div class="hotel-price">
-												<?php esc_html_e( 'Price:' ); ?>
-												<span>
-											<?php echo esc_html( $price ); ?>$
-										</span>
-											</div>
-										<?php endif; ?>
-										<?php if ( $hotel_address || $hotel_country ) : ?>
-											<div class="hotel-location">
-												<?php echo esc_html( $hotel_country ); ?> <br>
-												<?php echo esc_html( $hotel_address ); ?>
-											</div>
-										<?php endif; ?>
-										<div class="va-post-title">
-											<h4>
-												<a href="<?php the_permalink(); ?>">
-													<?php the_title(); ?>
-												</a>
-											</h4>
-										</div>
-									</article>
+									<?php get_template_part( '/template-parts/hotel', 'content' ); ?>
 								</div>
 							<?php endwhile; ?>
 							<div class="va-blog-pagination col-lg-12">
