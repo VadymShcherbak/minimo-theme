@@ -23,8 +23,8 @@ $hotel_country = get_post_meta( get_the_ID(), '_hotel_country', true );
 		<div class="hotel-price">
 			<?php esc_html_e( 'Price:' ); ?>
 			<span>
-											<?php echo esc_html( $price ); ?>$
-										</span>
+				<?php echo esc_html( $price ); ?>$
+			</span>
 		</div>
 	<?php endif; ?>
 	<?php if ( $hotel_address || $hotel_country ) : ?>

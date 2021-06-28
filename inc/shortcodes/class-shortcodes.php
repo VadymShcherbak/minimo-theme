@@ -5,10 +5,10 @@
  * @package Minimo
  */
 
-namespace MINIMO_THEME_VADYM\inc;
+namespace MINIMO_THEME_VADYM\Inc;
 
+use MINIMO_THEME_VADYM\Inc\Shortcodes\Hotel;
 use MINIMO_THEME_VADYM\Inc\Traits\Singleton;
-use MINIMO_THEME_VADYM\inc\shortcodes\Last_Hotels;
 
 /**
  * Minimo theme
@@ -28,13 +28,28 @@ class Shortcodes {
 	 * Require shortcodes.
 	 */
 	public function require_shortcodes() {
-		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/hotels/class-last-hotels.php';
+		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/hotel/class-hotel.php';
 	}
 
 	/**
 	 * Init meta boxes.
 	 */
 	public function init_shortcodes() {
-		Last_Hotels::get_instance();
+		Hotel::get_instance();
+	}
+
+	/**
+	 * Intended for output of arrays.
+	 *
+	 * @param array  $args Array parameters.
+	 *
+	 * @param string $template_type Template type.
+	 */
+	public static function get_shortcodes( $args, $template_type ) {
+		get_template_part(
+			'inc/shortcodes/' . $template_type . '/templates/' . $template_type,
+			'',
+			$args,
+		);
 	}
 }

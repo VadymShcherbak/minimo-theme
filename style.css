@@ -1888,6 +1888,11 @@ textarea {
   width: 100%;
 }
 
+.last-hotels {
+  text-align: center;
+  margin-top: 10px;
+}
+
 .va-main-footer {
   padding-top: 40px;
   padding-bottom: 40px;
