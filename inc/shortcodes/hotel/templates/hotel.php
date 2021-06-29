@@ -19,6 +19,7 @@
 					<?php get_template_part( '/template-parts/hotel', 'content' ); ?>
 				</div>
 			</div>
+
 		<?php endwhile; ?>
 	</div>
 <?php endif; ?>

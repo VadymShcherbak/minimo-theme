@@ -8,6 +8,7 @@
 namespace MINIMO_THEME_VADYM\Inc;
 
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Hotel;
+use MINIMO_THEME_VADYM\Inc\Shortcodes\Images_Gallery;
 use MINIMO_THEME_VADYM\Inc\Traits\Singleton;
 
 /**
@@ -29,6 +30,7 @@ class Shortcodes {
 	 */
 	public function require_shortcodes() {
 		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/hotel/class-hotel.php';
+		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/images-gallery/class-images-gallery.php';
 	}
 
 	/**
@@ -36,6 +38,7 @@ class Shortcodes {
 	 */
 	public function init_shortcodes() {
 		Hotel::get_instance();
+		Images_Gallery::get_instance();
 	}
 
 	/**
