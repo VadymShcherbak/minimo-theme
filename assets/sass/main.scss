@@ -18,7 +18,8 @@ img {
 }
 
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.va-title {
 	font-size: 29px;
 	line-height: 1.2;
 	text-transform: uppercase;
@@ -339,7 +340,21 @@ textarea {
 // IMAGES GALLERY
 // ======================================
 .post-preview {
-	margin-bottom: 10px;
+	margin-bottom: 30px;
+}
+
+.carousel-img-size {
+
+	img {
+		width: 1110px;
+		height: 740px;
+	}
+}
+
+///=== TITLE ===///
+.va-title {
+	text-align: center;
+
 }
 
 //=======================================

@@ -9,16 +9,15 @@ namespace MINIMO_THEME_VADYM\Inc\Shortcodes;
 
 use MINIMO_THEME_VADYM\Inc\Shortcodes;
 use MINIMO_THEME_VADYM\Inc\Traits\Singleton;
-use WP_Query;
 
 /**
- * Minimo theme
+ * Minimo theme.
  */
 class Images_Gallery {
 	use Singleton;
 
 	/**
-	 * Construct
+	 * Construct.
 	 */
 	protected function __construct() {
 		add_shortcode( 'images-gallery', array( $this, 'get_images_gallery' ) );
@@ -36,23 +35,20 @@ class Images_Gallery {
 				'images'     => '',
 				'view'       => 'grid',
 				'columns'    => 3,
-				'image_size' => 'thumbnail',
-				'post_type'  => 'hotel',
+				'image_size' => '',
 			),
-			$args,
-			'hotel'
+			$args
 		);
 
 		$class_wrapper = 'row';
-		$class_item    = 'col-md-12 col-lg-' . intval( 12 / $args['columns'] ) . ' ';
+		$class_item    = 'col-md-12 col-lg-' . intval( 12 / $args['columns'] );
 		$images        = explode( ',', $args['images'] );
-		$image_size    = 'image_size';
 
 		if ( 'grid' === $args['view'] ) {
-			$class_item .= 'img-item';
+			$class_item .= ' img-item';
 		} elseif ( 'carousel' === $args['view'] ) {
-			$class_wrapper = 'main-carousel';
-			$class_item   .= 'carousel-cell';
+			$class_wrapper = ' main-carousel';
+			$class_item   .= ' carousel-cell';
 		}
 
 		ob_start();
@@ -62,7 +58,7 @@ class Images_Gallery {
 				'images'        => $images,
 				'class_wrapper' => $class_wrapper,
 				'class_item'    => $class_item,
-				'image_size'    => $image_size,
+				'image_size'    => $args['image_size'],
 				'view'          => $args['view'],
 				'columns'       => $args['columns'],
 			),

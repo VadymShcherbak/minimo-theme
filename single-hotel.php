@@ -55,7 +55,7 @@ get_header();
 							<?php if ( isset( $hotel_gallery ) && ! empty( $hotel_gallery ) ) : ?>
 								<div class="main-carousel">
 									<?php foreach ( $hotel_gallery as $hotel_img ) : ?>
-										<div class="carousel-cell">
+										<div class="carousel-cell carousel-img-size">
 											<img src="<?php echo esc_url( wp_get_attachment_url( $hotel_img ) ); ?>" alt="Hotel img">
 										</div>
 									<?php endforeach; ?>

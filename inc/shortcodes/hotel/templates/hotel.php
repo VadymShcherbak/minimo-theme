@@ -8,7 +8,6 @@
 
 ?>
 
-<h3 class="last-hotels">Last Hotels</h3>
 <?php if ( isset( $args['hotel'] ) && ! empty( $args['hotel'] ) ) : ?>
 	<div class="<?php echo esc_attr( $args['class_wrapper'] ); ?>" <?php echo 'carousel' === $args['view'] ? esc_attr( 'data-columns=' . $args['columns'] ) : ''; ?>>
 		<?php while ( $args['hotel']->have_posts() ) : ?>
