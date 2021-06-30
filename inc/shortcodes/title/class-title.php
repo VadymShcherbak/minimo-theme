@@ -32,7 +32,7 @@ class Title {
 	public function show_title( $args ) {
 		$args = shortcode_atts(
 			array(
-				'title'        => 'Title',
+				'title'        => '',
 				'before_title' => '',
 				'after_title'  => '',
 			),

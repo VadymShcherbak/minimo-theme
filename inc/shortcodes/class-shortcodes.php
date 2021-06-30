@@ -7,8 +7,12 @@
 
 namespace MINIMO_THEME_VADYM\Inc;
 
+use MINIMO_THEME_VADYM\Inc\Shortcodes\Button;
+use MINIMO_THEME_VADYM\Inc\Shortcodes\Carousel;
+use MINIMO_THEME_VADYM\Inc\Shortcodes\Col;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Hotel;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Images_Gallery;
+use MINIMO_THEME_VADYM\Inc\Shortcodes\Row;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Title;
 use MINIMO_THEME_VADYM\Inc\Traits\Singleton;
 
@@ -33,6 +37,10 @@ class Shortcodes {
 		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/hotel/class-hotel.php';
 		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/images-gallery/class-images-gallery.php';
 		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/title/class-title.php';
+		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/button/class-button.php';
+		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/row/class-row.php';
+		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/col/class-col.php';
+		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/carousel/class-carousel.php';
 	}
 
 	/**
@@ -42,6 +50,10 @@ class Shortcodes {
 		Hotel::get_instance();
 		Images_Gallery::get_instance();
 		Title::get_instance();
+		Button::get_instance();
+		Row::get_instance();
+		Col::get_instance();
+		Carousel::get_instance();
 	}
 
 	/**

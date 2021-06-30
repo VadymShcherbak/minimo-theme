@@ -1954,3 +1954,30 @@ textarea {
 .widget-footer {
   margin-bottom: 0;
 }
+
+.button-wrapper {
+  margin-bottom: 10px;
+}
+
+.default,
+.accent {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #626262;
+  color: #0c0c0c;
+  border-radius: 10px;
+}
+
+.accent {
+  color: #ffffff;
+  background-color: #00a32a;
+  border: none;
+}
+
+.carousel-small {
+  width: 500px;
+  height: 500px;
+}
+.carousel-small .button-wrapper {
+  text-align: center;
+}
