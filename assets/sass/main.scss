@@ -444,3 +444,40 @@ textarea {
 		text-align: center;
 	}
 }
+
+//=== INFOBOX ===//
+.va-infobox {
+	padding: 15px;
+	border-radius: 10px;
+}
+
+.va-infobox-icon {
+	margin-bottom: 5px;
+
+	i {
+		font-size: 28px;
+	}
+}
+
+.va-infobox-content {
+
+	h5 {
+		margin-bottom: 10px;
+	}
+
+	p {
+		margin-bottom: 10px;
+	}
+}
+
+.va-infobox-btn {
+
+	a {
+		display: inline-block;
+		padding: 5px 13px;
+		background: rgb(255 255 255 / 69%);
+		/* border: 2px solid #6262626b; */
+		border-radius: 5px;
+		color: #626262;
+	}
+}
