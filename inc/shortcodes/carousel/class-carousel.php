@@ -36,7 +36,7 @@ class Carousel {
 			$args
 		);
 
-		$args['content'] = explode( ',', $content );
+		$args['content'] = $content;
 
 		ob_start();
 
