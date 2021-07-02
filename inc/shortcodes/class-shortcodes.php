@@ -13,6 +13,7 @@ use MINIMO_THEME_VADYM\Inc\Shortcodes\Col;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Hotel;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Images_Gallery;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Infobox;
+use MINIMO_THEME_VADYM\Inc\Shortcodes\Responsive_Text;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Row;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Title;
 use MINIMO_THEME_VADYM\Inc\Traits\Singleton;
@@ -43,6 +44,7 @@ class Shortcodes {
 		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/col/class-col.php';
 		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/carousel/class-carousel.php';
 		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/infobox/class-infobox.php';
+		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/responsive-text/class-responsive-text.php';
 	}
 
 	/**
@@ -57,6 +59,7 @@ class Shortcodes {
 		Col::get_instance();
 		Carousel::get_instance();
 		Infobox::get_instance();
+		Responsive_Text::get_instance();
 	}
 
 	/**

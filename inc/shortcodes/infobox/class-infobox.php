@@ -27,20 +27,16 @@ class Infobox {
 	/**
 	 * Render infobox.
 	 *
-	 * @param array  $args Infobox parameters.
-	 *
-	 * @param string $content Shortcode content.
+	 * @param array $args Infobox parameters.
 	 */
-	public function render_infobox( $args, $content ) {
+	public function render_infobox( $args ) {
 		$args = shortcode_atts(
 			array(
 				'icon'           => 'fad fa-star',
 				'title'          => 'Title',
 				'text'           => 'text',
-				'button'         => array(
-					'text' => 'button text',
-					'link' => '#',
-				),
+				'button-text'    => 'button text',
+				'button-link'    => '#',
 				'background'     => 'white',
 				'bg-color-hover' => '',
 				'text-color'     => '#626262',
@@ -49,8 +45,6 @@ class Infobox {
 			$args,
 			'infobox'
 		);
-
-		$args['content'] = $content;
 
 		ob_start();
 

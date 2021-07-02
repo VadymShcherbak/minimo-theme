@@ -40,8 +40,8 @@ $uniq_id = uniqid( 'id-' );
 		</p>
 	</div>
 	<div class="va-infobox-btn">
-		<a href="<?php echo esc_url( $args['button']['link'] ); ?>">
-			<?php echo esc_html( $args['button']['text'] ); ?>
+		<a href="<?php echo esc_url( $args['button-link'] ); ?>">
+			<?php echo esc_html( $args['button-text'] ); ?>
 		</a>
 	</div>
 </div>
