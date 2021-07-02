@@ -1982,6 +1982,10 @@ textarea {
   text-align: center;
 }
 
+.va-responsive-text {
+  margin-bottom: 50px;
+}
+
 .va-infobox {
   padding: 15px;
   border-radius: 10px;
@@ -2009,4 +2013,14 @@ textarea {
   /* border: 2px solid #6262626b; */
   border-radius: 5px;
   color: #626262;
+}
+
+.va-custom-btn-wrapper a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.va-custom-btn-wrapper a i {
+  font-size: 22px;
 }

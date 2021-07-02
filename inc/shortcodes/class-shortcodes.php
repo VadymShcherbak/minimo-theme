@@ -10,6 +10,7 @@ namespace MINIMO_THEME_VADYM\Inc;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Button;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Carousel;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Col;
+use MINIMO_THEME_VADYM\Inc\Shortcodes\Custom_Button;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Hotel;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Images_Gallery;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Infobox;
@@ -45,6 +46,7 @@ class Shortcodes {
 		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/carousel/class-carousel.php';
 		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/infobox/class-infobox.php';
 		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/responsive-text/class-responsive-text.php';
+		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/custom-button/class-custom-button.php';
 	}
 
 	/**
@@ -60,6 +62,7 @@ class Shortcodes {
 		Carousel::get_instance();
 		Infobox::get_instance();
 		Responsive_Text::get_instance();
+		Custom_Button::get_instance();
 	}
 
 	/**
