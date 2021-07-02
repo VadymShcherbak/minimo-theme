@@ -32,7 +32,7 @@ class Infobox {
 	public function render_infobox( $args ) {
 		$args = shortcode_atts(
 			array(
-				'icon'           => 'fad fa-star',
+				'icon'           => 'fas fa-crutch',
 				'title'          => 'Title',
 				'text'           => 'text',
 				'button-text'    => 'button text',

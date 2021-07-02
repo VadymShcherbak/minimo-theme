@@ -2024,3 +2024,7 @@ textarea {
 .va-custom-btn-wrapper a i {
   font-size: 22px;
 }
+
+.va-social-icon {
+  display: inline-block;
+}

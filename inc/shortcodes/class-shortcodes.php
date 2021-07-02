@@ -16,6 +16,7 @@ use MINIMO_THEME_VADYM\Inc\Shortcodes\Images_Gallery;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Infobox;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Responsive_Text;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Row;
+use MINIMO_THEME_VADYM\Inc\Shortcodes\Social_Icon;
 use MINIMO_THEME_VADYM\Inc\Shortcodes\Title;
 use MINIMO_THEME_VADYM\Inc\Traits\Singleton;
 
@@ -47,6 +48,7 @@ class Shortcodes {
 		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/infobox/class-infobox.php';
 		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/responsive-text/class-responsive-text.php';
 		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/custom-button/class-custom-button.php';
+		require_once VA_MINIMO_DIR_PATH . '/inc/shortcodes/social-icon/class-social-icon.php';
 	}
 
 	/**
@@ -63,6 +65,7 @@ class Shortcodes {
 		Infobox::get_instance();
 		Responsive_Text::get_instance();
 		Custom_Button::get_instance();
+		Social_Icon::get_instance();
 	}
 
 	/**

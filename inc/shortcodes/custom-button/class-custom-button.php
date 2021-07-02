@@ -37,7 +37,7 @@ class Custom_Button {
 				'text-color-hover'   => '#fff',
 				'color-button'       => '#fedd7e',
 				'button-hover-color' => '#ff6900a8',
-				'icon'               => 'far fa-alien',
+				'icon'               => 'fas fa-crutch',
 				'link'               => '#',
 			),
 			$args,
