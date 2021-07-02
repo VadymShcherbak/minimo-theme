@@ -10,9 +10,8 @@
 $uniq_id = uniqid( 'id-' );
 ?>
 <style>
-	#<?php echo esc_attr( $uniq_id ); ?> .va-infobox-content h5,
-	#<?php echo esc_attr( $uniq_id ); ?> .va-infobox-content p,
-	#<?php echo esc_attr( $uniq_id ); ?> .va-infobox-icon i {
+	#<?php echo esc_attr( $uniq_id ); ?> .va-infobox-content,
+	#<?php echo esc_attr( $uniq_id ); ?> .va-infobox-icon {
 		color: <?php echo esc_attr( $args['text-color'] ); ?>;
 		transition: all .4s ease;
 	}
@@ -20,12 +19,11 @@ $uniq_id = uniqid( 'id-' );
 		background-color: <?php echo esc_attr( $args['background'] ); ?>;
 		transition: all .4s ease;
 	}
-	#<?php echo esc_attr( $uniq_id ); ?>.va-infobox:hover{
+	#<?php echo esc_attr( $uniq_id ); ?>.va-infobox:hover {
 		background-color: <?php echo esc_attr( $args['bg-color-hover'] ); ?>;
 	}
-	#<?php echo esc_attr( $uniq_id ); ?>.va-infobox:hover .va-infobox-content h5,
-	#<?php echo esc_attr( $uniq_id ); ?>.va-infobox:hover .va-infobox-content p,
-	#<?php echo esc_attr( $uniq_id ); ?>.va-infobox:hover .va-infobox-icon i,{
+	#<?php echo esc_attr( $uniq_id ); ?>.va-infobox:hover .va-infobox-content,
+	#<?php echo esc_attr( $uniq_id ); ?>.va-infobox:hover .va-infobox-icon i {
 		color: <?php echo esc_attr( $args['text-hover'] ); ?>;
 	}
 </style>
